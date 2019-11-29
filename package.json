@@ -1,0 +1,29 @@
+{
+  "name": "@iwharris/timer",
+  "version": "0.0.1",
+  "description": "no-nonsense nodejs timer",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc -p .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/iwharris/timer.git"
+  },
+  "keywords": [
+    "timer",
+    "nodejs",
+    "typescript"
+  ],
+  "author": "Ian Harris",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/iwharris/timer/issues"
+  },
+  "homepage": "https://github.com/iwharris/timer#readme",
+  "devDependencies": {
+    "@types/node": "^12.12.14",
+    "typescript": "^3.7.2"
+  }
+}
