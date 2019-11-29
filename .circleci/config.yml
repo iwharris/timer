@@ -22,12 +22,22 @@ jobs:
           - v1-dependencies-
 
       - run: npm install
-      - run:
-          name: Run tests
-          command: npm run test:coverage
+
       - run:
           name: Build typescript
           command: npm run build
+
+      - run:
+          name: Run tests
+          command: npm run test:coverage
+
+      - store_artifacts:
+          path: dist/coverage/lcov-report
+          destination: coverage
+
+      # upload coverage report
+      - run: curl -s https://codecov.io/bash | bash -s -- -t "${CODECOV_TOKEN}"
+
       - save_cache:
           paths:
             - node_modules
