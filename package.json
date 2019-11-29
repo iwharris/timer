@@ -3,9 +3,12 @@
   "version": "0.0.1",
   "description": "no-nonsense nodejs timer",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsc -p .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "prepublish": "npm run test && npm run build"
   },
   "repository": {
     "type": "git",
@@ -22,8 +25,17 @@
     "url": "https://github.com/iwharris/timer/issues"
   },
   "homepage": "https://github.com/iwharris/timer#readme",
+  "jest": {
+    "transform": {"^.+\\.ts?$": "ts-jest"},
+    "testEnvironment": "node",
+    "testRegex": "/test/.*\\.(test|spec)?\\.(ts)$",
+    "moduleFileExtensions": ["ts", "js"]
+  },
   "devDependencies": {
+    "@types/jest": "^24.0.23",
     "@types/node": "^12.12.14",
+    "jest": "^24.9.0",
+    "ts-jest": "^24.2.0",
     "typescript": "^3.7.2"
   }
 }
