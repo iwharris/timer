@@ -11,13 +11,14 @@ describe('Timer', () => {
         hrtimeSpy.mockClear();
     });
 
-    it('should start the timer upon construction', () => {        
-        const timer = new Timer();
+    it('should start the timer upon construction', () => {
+        hrtimeSpy.mockImplementation(() => [123, 456]);
 
-        hrtimeSpy.mockImplementationOnce(() => [123, 456]);
+        const timer = new Timer();
 
         expect(hrtimeSpy).toHaveBeenCalledTimes(1);
         expect(hrtimeSpy).toHaveBeenLastCalledWith<[]>();
+        expect(timer.time).toEqual([123, 456]);
         expect(timer.elapsed()).toEqual([123, 456]);
     });
 
@@ -31,6 +32,6 @@ describe('Timer', () => {
         expect(timer.elapsedNanoseconds()).toBe(123123456789);
         expect(hrtimeSpy).toHaveBeenCalledTimes(4);
 
-        
+
     });
 });
