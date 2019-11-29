@@ -26,10 +26,15 @@
   },
   "homepage": "https://github.com/iwharris/timer#readme",
   "jest": {
-    "transform": {"^.+\\.ts?$": "ts-jest"},
+    "transform": {
+      "^.+\\.ts?$": "ts-jest"
+    },
     "testEnvironment": "node",
     "testRegex": "/test/.*\\.(test|spec)?\\.(ts)$",
-    "moduleFileExtensions": ["ts", "js"]
+    "moduleFileExtensions": [
+      "ts",
+      "js"
+    ]
   },
   "devDependencies": {
     "@types/jest": "^24.0.23",
