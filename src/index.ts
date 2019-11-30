@@ -1,4 +1,3 @@
-
 /**
  * High resolution time tuple in the form [elapsedSeconds, elapsedNanoseconds].
  */
@@ -6,7 +5,7 @@ export type HRTime = [number, number];
 
 /**
  * Wrapper around process.hrtime().
- * 
+ *
  * @example
  */
 export class Timer {
@@ -18,7 +17,7 @@ export class Timer {
 
     get time(): HRTime {
         return this.rawTime;
-    } 
+    }
 
     /**
      * (re)starts the timer.
@@ -29,7 +28,7 @@ export class Timer {
 
     /**
      * Gets the HRTime tuple representing elapsed time.
-     * 
+     *
      * @returns HRTime
      */
     elapsed(): HRTime {

@@ -31,7 +31,5 @@ describe('Timer', () => {
         expect(timer.elapsedMilliseconds()).toBe(123123);
         expect(timer.elapsedNanoseconds()).toBe(123123456789);
         expect(hrtimeSpy).toHaveBeenCalledTimes(4);
-
-
     });
 });
