@@ -3,6 +3,12 @@ A no-nonsense nodejs timer
 
 [![npm version](https://badge.fury.io/js/%40iwharris%2Ftimer.svg)](https://badge.fury.io/js/%40iwharris%2Ftimer)
 
+## Installation
+
+```bash
+npm install @iwharris/timer
+```
+
 ## Usage
 
 ```javascript
@@ -15,13 +21,21 @@ t.elapsedMilliseconds();
 // 3421
 ```
 
-## Testing
+## Development
+
+```bash
+git clone git@github.com:iwharris/timer.git
+cd timer
+npm install
+```
+
+### Testing
 
 ```bash
 npm test
 ```
 
-## Compiling Typescript
+### Compiling Typescript
 
 ```bash
 npm build
