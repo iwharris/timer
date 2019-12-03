@@ -50,41 +50,14 @@
     "useTabs": false
   },
   "eslint": {
-    "parser": "@typescript-eslint/parser",
-    "plugins": [
-      "@typescript-eslint",
-      "prettier"
-    ],
-    "env": {
-      "node": true,
-      "commonjs": true,
-      "es6": true
-    },
-    "extends": [
-      "plugin:@typescript-eslint/recommended",
-      "plugin:prettier/recommended"
-    ],
-    "parserOptions": {
-      "ecmaVersion": 2019,
-      "sourceType": "module"
-    },
-    "rules": {
-      "prettier/prettier": "warn",
-      "no-unused-vars": "error",
-      "@typescript-eslint/explicit-function-return-type": 0,
-      "@typescript-eslint/no-explicit-any": 0,
-      "@typescript-eslint/camelcase": 0,
-      "@typescript-eslint/no-use-before-define": 0,
-      "@typescript-eslint/no-inferrable-types": 0
-    }
+    "extends": "@iwharris/eslint-config"
   },
   "devDependencies": {
+    "@iwharris/eslint-config": "0.0.1",
     "@types/jest": "^24.0.23",
     "@types/node": "^12.12.14",
     "@typescript-eslint/eslint-plugin": "^2.9.0",
-    "@typescript-eslint/parser": "^2.9.0",
     "eslint": "^6.7.2",
-    "eslint-config-prettier": "^6.7.0",
     "eslint-plugin-prettier": "^3.1.1",
     "jest": "^24.9.0",
     "prettier": "^1.19.1",
