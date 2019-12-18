@@ -38,7 +38,7 @@
       "js"
     ]
   },
-  "eslint": {
+  "eslintConfig": {
     "extends": "@iwharris/eslint-config"
   },
   "devDependencies": {
